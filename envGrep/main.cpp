@@ -7,49 +7,49 @@ bool compare(string i, string j){
         return true;
     else return false;
 }
-int main(int i, char *c[], char *c2[])
+int main(int argc, char *argv[], char *envG[])
 {
-    if(i==1){
+    if(argc == 1){
 
-        for(int i = 0; c2[i]!= nullptr; i++){
-            cout << c2[i] << endl;
+        for(int i = 0; envG[i] != nullptr; i++){
+            cout << envG[i] << endl;
         }
     }
-    if(i==2){
-        for(int i = 0; c2[i] != nullptr; i++){
+    if(argc == 2){
+        for(int i = 0; envG[i] != nullptr; i++){
 
-                if(compare(c[1],c2[i])){
-                    cout << c2[i]<<endl;
+                if(compare(argv[1], envG[i])){
+                    cout << envG[i] << endl;
                 }
             }
         }
-    if(i==3){
-        string input = c[1];
+    if(argc == 3){
+        string input = argv[1];
         if(input=="-n"){
-            for(int i = 0; c2[i]!=nullptr; i++){
-                string tmp = c2[i];
-                if(compare(c[2],tmp))
+            for(int i = 0; envG[i] != nullptr; i++){
+                string tmp = envG[i];
+                if(compare(argv[2], tmp))
                     cout << tmp.substr(0,tmp.find("="))<< endl;
             }
         }
 
         if(input == "-i"){
 
-            for(int i = 0; c2[i]!=nullptr; i++){
-                string input2 = c[2];
-                string tmp = c2[i];
+            for(int i = 0; envG[i] != nullptr; i++){
+                string input2 = argv[2];
+                string tmp = envG[i];
                 for(int j = 0; j<input2.size();j++)
                     input2.at(j) = toupper(input2.at(j));
                 if(compare(input2,tmp))
-                    cout << c2[i]<< endl;
+                    cout << envG[i] << endl;
             }
         }
 
     }
-    if(i==4){
-        for(int i = 0; c2[i]!=nullptr; i++){
-            string input2 = c[3];
-            string tmp = c2[i];
+    if(argc == 4){
+        for(int i = 0; envG[i] != nullptr; i++){
+            string input2 = argv[3];
+            string tmp = envG[i];
             for(int j = 0; j<input2.size();j++)
                 input2.at(j) = toupper(input2.at(j));
             if(compare(input2,tmp))
