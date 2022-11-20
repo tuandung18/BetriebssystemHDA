@@ -1,0 +1,3 @@
+/home/edward/Betriebssystem/Prak2/cmake-build-debug/CMakeFiles/Prak2.dir
+/home/edward/Betriebssystem/Prak2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/edward/Betriebssystem/Prak2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
